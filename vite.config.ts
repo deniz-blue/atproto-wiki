@@ -7,41 +7,35 @@ import mdx from 'fumadocs-mdx/vite';
 import { nitro } from 'nitro/vite';
 
 export default defineConfig({
-  server: {
-    port: 3000,
-  },
-  plugins: [
-    mdx(await import('./source.config')),
-    tailwindcss(),
-    tsConfigPaths({
-      projects: ['./tsconfig.json'],
-    }),
-    tanstackStart({
-      spa: {
-        enabled: true,
-        prerender: {
-          enabled: true,
-          crawlLinks: true,
-        },
-      },
+	server: {
+		port: 3000,
+	},
+	plugins: [
+		mdx(await import('./source.config')),
+		tailwindcss(),
+		tsConfigPaths({
+			projects: ['./tsconfig.json'],
+		}),
+		tanstackStart({
+			spa: {
+				enabled: true,
+				prerender: {
+					enabled: true,
+					crawlLinks: true,
+				},
+			},
 
-      pages: [
-        {
-          path: '/docs',
-        },
-        {
-          path: '/api/search',
-        },
-        {
-          path: 'llms-full.txt',
-        },
-        {
-          path: 'llms.txt',
-        },
-      ],
-    }),
-    react(),
-    // please see https://tanstack.com/start/latest/docs/framework/react/guide/hosting#nitro for guides on hosting
-    nitro(),
-  ],
+			pages: [
+				{
+					path: '/',
+				},
+				{
+					path: '/api/search',
+				},
+			],
+		}),
+		react(),
+		// please see https://tanstack.com/start/latest/docs/framework/react/guide/hosting#nitro for guides on hosting
+		nitro(),
+	],
 });

@@ -1,0 +1,9 @@
+---
+title: DID Document
+---
+
+The [DID](did.mdx) Document is a JSON document (in the form of a [JSON-LD](https://json-ld.org/) document) that contains information about a [DID](did.mdx), such as the public keys associated with the [DID](did.mdx), and service endpoints.
+
+DID Documents are resolved from [DIDs](did.mdx) using a method specific to the DID's method.
+
+For example, the `did:web` method resolves DIDs by fetching a JSON document from a `.well-known` URL, while the `did:plc` method resolves DIDs by fetching a JSON document from the [PLC directory](plc-directory.mdx).

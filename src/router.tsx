@@ -3,10 +3,10 @@ import { routeTree } from './routeTree.gen';
 import { NotFound } from '@/components/not-found';
 
 export function getRouter() {
-  return createTanStackRouter({
-    routeTree,
-    defaultPreload: 'intent',
-    scrollRestoration: true,
-    defaultNotFoundComponent: NotFound,
-  });
+	return createTanStackRouter({
+		routeTree,
+		defaultPreload: 'intent',
+		scrollRestoration: true,
+		defaultNotFoundComponent: NotFound,
+	});
 }
