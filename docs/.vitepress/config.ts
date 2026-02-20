@@ -21,8 +21,7 @@ export default defineConfig({
 
 		sidebar: [
 			item("AT Protocol", "/"),
-			item("Tools", "/tools"),
-			item("Libraries", "/libraries"),
+			item("Tools & Libraries", "/tools-and-libraries"),
 			{
 				text: "Identity",
 				items: [
