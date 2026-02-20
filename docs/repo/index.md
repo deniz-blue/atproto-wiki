@@ -1,0 +1,10 @@
+# User Data Repositories
+
+User Data Repositories, or Repositories for short, is the name for the data storage system used by the Atmosphere.
+
+Each user has their own Repository that stores all of their data, including their profile information, posts, and other content.
+
+Repositories are owned by [Personal Data Servers](../pds/index.md), which are responsible for storing and serving the data in the Repositories.
+
+Repositories are organized into [Collections](./collection.md) where each Collection is identified by a unique URI.
+The URI can be used to resolve the [Lexicon](../lexicon/index.md) definition of the Collection, which describes the structure of the Records in the Collection.

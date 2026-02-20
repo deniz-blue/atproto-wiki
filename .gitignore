@@ -19,3 +19,5 @@ worker-configuration.d.ts
 /playwright/.cache/
 .tanstack
 .source
+docs/.vitepress/dist
+docs/.vitepress/cache
