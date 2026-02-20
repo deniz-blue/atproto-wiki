@@ -6,11 +6,18 @@ export default defineConfig({
 	title: "AT Protocol Wiki",
 	description: "AT Protocol Wiki",
 	themeConfig: {
-		// https://vitepress.dev/reference/default-theme-config
-		nav: [
-			{ text: "Home", link: "/" },
-			{ text: "Examples", link: "/markdown-examples" }
-		],
+		nav: [],
+
+		editLink: {
+			text: "Edit this page on GitHub",
+			pattern: "https://github.com/deniz-blue/atproto-wiki/edit/main/docs/:path",
+		},
+
+		lastUpdated: {},
+
+		search: {
+			provider: "local",
+		},
 
 		sidebar: [
 			item("AT Protocol", "/"),

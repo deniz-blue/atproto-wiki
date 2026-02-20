@@ -1,3 +1,7 @@
+---
+isHome: true
+---
+
 # AT Protocol
 
 The AT Protocol is a decentralized data protocol that enables applications to interact with the Atmosphere, a global network of interconnected data and services.
@@ -11,21 +15,5 @@ This allows for a more open and interoperable ecosystem, where users can easily 
 - Their DID points to a [Personal Data Server (PDS)](pds/index.md).
 - The PDS contains the user's [Repository](repo/index.md), which is a [collection](repo/collection.md) of [records](repo/record.md).
 - Records can be validated per-collection using [Lexicons](lexicon/index.md).
-- Applications can use [OAuth](oauth/index.md) to request access to a user's data.
+- Applications can use [OAuth](oauth/index.md) to request access to write to a user's Repository.
 - [Relays](relay/index.md) listen to changes in Repositories and can be used to build real-time applications.
-
-<!-- ## Start Hacking
-
-<Cards>
-	<Card title="Tools" href="/tools" />
-	<Card title="Libraries" href="/libraries" />
-</Cards>
-
-## Learn Concepts
-
-<Cards>
-	<Card title="Identity" href="/identity" />
-	<Card title="PDS" href="/pds" />
-	<Card title="Repository" href="/repo" />
-	<Card title="Relays" href="/relay" />
-</Cards> -->
