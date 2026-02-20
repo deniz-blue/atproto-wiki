@@ -1,6 +1,9 @@
 node_modules
 dist
-
+.mf
+.wrangler
+.dev.vars*
+worker-configuration.d.ts
 .DS_Store
 .cache
 .output
@@ -15,5 +18,4 @@ dist
 /blob-report/
 /playwright/.cache/
 .tanstack
-
 .source

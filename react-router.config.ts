@@ -8,6 +8,7 @@ export default {
 	ssr: true,
 	future: {
 		v8_middleware: true,
+		v8_viteEnvironmentApi: true,
 	},
 	// async prerender({ getStaticPaths }) {
 	// 	const paths: string[] = [];
