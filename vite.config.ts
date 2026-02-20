@@ -1,38 +1,19 @@
-import react from '@vitejs/plugin-react';
-import { tanstackStart } from '@tanstack/react-start/plugin/vite';
-import { defineConfig } from 'vite';
-import tsConfigPaths from 'vite-tsconfig-paths';
+import { reactRouter } from '@react-router/dev/vite';
 import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import mdx from 'fumadocs-mdx/vite';
+import * as MdxConfig from './source.config';
+import { cloudflareDevProxy } from "@react-router/dev/vite/cloudflare";
 
 export default defineConfig({
-	server: {
-		port: 3000,
-	},
 	plugins: [
-		mdx(await import('./source.config')),
+		mdx(MdxConfig),
 		tailwindcss(),
-		tsConfigPaths({
+		cloudflareDevProxy(),
+		reactRouter(),
+		tsconfigPaths({
 			projects: ['./tsconfig.json'],
 		}),
-		tanstackStart({
-			spa: {
-				enabled: true,
-				prerender: {
-					enabled: true,
-					crawlLinks: true,
-				},
-			},
-
-			pages: [
-				{
-					path: '/',
-				},
-				{
-					path: '/api/search',
-				},
-			],
-		}),
-		react(),
 	],
 });
