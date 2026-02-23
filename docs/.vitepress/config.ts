@@ -1,10 +1,16 @@
 import { defineConfig } from "vitepress"
+import ExtMermaid from "./ext-mermaid";
 
 const item = (text: string, link?: string) => ({ text, link });
 
 export default defineConfig({
 	title: "AT Protocol Wiki",
 	description: "AT Protocol Wiki",
+	markdown: {
+		config: (md) => {
+			ExtMermaid(md);
+		},
+	},
 	themeConfig: {
 		nav: [],
 
@@ -49,6 +55,8 @@ export default defineConfig({
 				text: "OAuth & Authentication",
 				items: [
 					item("OAuth", "/oauth"),
+					item("OAuth Client Metadata", "/oauth/client-metadata"),
+					item("Vite OAuth Guide", "/oauth/vite"),
 				],
 			},
 			{
