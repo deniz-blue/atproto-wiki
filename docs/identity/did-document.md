@@ -11,7 +11,7 @@ DID Documents are resolved from [DIDs](did.md) depending on the method of the DI
 DID Documents are used for:
 
 - [Record](../repo/record.md) Verification
-- [Handles](.handle.md) using `alsoKnownAs` 
+- [Handles](../identity/handle.md) using `alsoKnownAs` 
 - Resolving the user's [Personal Data Server (PDS)](../pds/index.md) via `service` entries
 
 Example DID Document:

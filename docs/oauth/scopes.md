@@ -9,7 +9,7 @@ If working with blobs: `blob:*/*`
 - `repo`: Access user's [Repository](../repo/index.md)
 - `blob`: Access user's Blobs
 - `rpc`: XRPC Calls
-- `identity`: Manage user's identity, including [DID Document](../identity/did-document.md) and [Handles](.handle.md)
+- `identity`: Manage user's identity, including [DID Document](../identity/did-document.md) and [Handles](../identity/handle.md)
 - `account`: Manage user's account, including email and password
 
 ### `repo`
