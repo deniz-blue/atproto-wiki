@@ -1,14 +1,12 @@
-# .
+# atproto-wiki
 
-This is a Tanstack Start application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+A community wiki for atproto. Feel free to contribute; don't hesitate to propose radical changes, and to add new content. The wiki is open to everyone, and we welcome contributions of all kinds.
 
-Run development server:
+This wiki uses [Vitepress](https://vitepress.dev/) for documentation. You can find the source code in the `docs` directory.
+
+Development:
 
 ```bash
-npm run dev
-# or
+pnpm i
 pnpm dev
-# or
-yarn dev
 ```
