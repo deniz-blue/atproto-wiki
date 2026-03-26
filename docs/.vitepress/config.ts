@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress"
 import ExtMermaid from "./ext-mermaid";
-
-const item = (text: string, link?: string) => ({ text, link });
+import { sidebar } from "./sidebar";
+import { ExtXRPC } from "./ext-xrpc";
 
 export default defineConfig({
 	title: "AT Protocol Wiki",
@@ -9,6 +9,7 @@ export default defineConfig({
 	markdown: {
 		config: (md) => {
 			ExtMermaid(md);
+			ExtXRPC(md);
 		},
 	},
 	themeConfig: {
@@ -25,70 +26,7 @@ export default defineConfig({
 			provider: "local",
 		},
 
-		sidebar: [
-			item("AT Protocol", "/"),
-			item("Tools & Libraries", "/tools-and-libraries"),
-			{
-				text: "Identity",
-				items: [
-					item("DID", "/identity/did"),
-					item("PLC Directory", "/identity/plc-directory"),
-					item("DID Document", "/identity/did-document"),
-					item("Handle", "/identity/handle"),
-				],
-			},
-			{
-				text: "Personal Data Servers",
-				items: [
-					item("PDS", "/pds"),
-				],
-			},
-			{
-				text: "Repositories",
-				items: [
-					item("Repository", "/repo"),
-					item("Collection", "/repo/collection"),
-					item("Record", "/repo/record"),
-				],
-			},
-			{
-				text: "OAuth & Authentication",
-				items: [
-					item("OAuth", "/oauth"),
-					item("OAuth Client Metadata", "/oauth/client-metadata"),
-					item("Vite OAuth Guide", "/oauth/vite"),
-				],
-			},
-			{
-				text: "Lexicons",
-				items: [
-					item("Lexicon", "/lexicon"),
-				],
-			},
-			{
-				text: "Relays & Syncing",
-				items: [
-					item("Relay", "/relay"),
-					item("Firehose", "/relay/firehose"),
-					item("Jetstream", "/relay/jetstream"),
-					item("Tap", "/relay/tap"),
-				],
-			},
-			{
-				text: "AppView",
-				items: [
-					item("App Views", "/appview"),
-				],
-			},
-			{
-				text: "Community Services",
-				items: [
-					item("Constellation", "/microcosm/constellation"),
-					item("Slingshot", "/microcosm/slingshot"),
-					item("Spacedust", "/microcosm/spacedust"),
-				],
-			},
-		],
+		sidebar,
 
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/deniz-blue/atproto-wiki" },
