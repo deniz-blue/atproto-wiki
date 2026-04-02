@@ -6,10 +6,12 @@ export const sidebar = [
 	item("AT Protocol For Users", "/for-users"),
 	item("Tools & Libraries", "/tools-and-libraries"),
 	section("Identity", [
-		item("DID", "/identity/did"),
-		item("PLC Directory", "/identity/plc-directory"),
-		item("DID Document", "/identity/did-document"),
 		item("Handle", "/identity/handle"),
+		item("Resolving Handles to DIDs", "/identity/resolving-handles"),
+		item("DID", "/identity/did"),
+		item("Resolving DID Documents", "/identity/resolving-did-document"),
+		item("DID Document", "/identity/did-document"),
+		item("PLC Directory", "/identity/plc-directory"),
 	]),
 	section("Personal Data Servers", [
 		item("PDS", "/pds"),
@@ -32,10 +34,10 @@ export const sidebar = [
 		item("Resolving Lexicons", "/lexicon/resolving"),
 	]),
 	section("Sync & Relays", [
-		item("Relay", "/relay"),
-		item("Firehose", "/relay/firehose"),
-		item("Jetstream", "/relay/jetstream"),
-		item("Tap", "/relay/tap"),
+		item("Sync", "/sync"),
+		item("Firehose", "/sync/firehose"),
+		item("Jetstream", "/sync/jetstream"),
+		item("Tap", "/sync/tap"),
 	]),
 	section("AppView", [
 		item("App Views", "/appview"),

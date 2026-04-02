@@ -2,44 +2,26 @@
 
 Handles are a way to represent [DIDs](did.md) in a human readable format.
 
-Handles are just internet domains that resolve to [DIDs](did.md).
+Handles are just **internet domains** that resolve to [DIDs](did.md).
 
-## Resolution: Handle -> DID
+## Where handles defined
 
-There are two methods for resolving a handle to a DID:
-- [DNS TXT Records](#dns-txt-records)
-- [HTTPS .well-known Endpoint](#https-well-known-endpoint)
+Handles are defined in the `alsoKnownAs` property of a [DID Document](did-document.md), like so:
 
-You can alternatively use the `com.atproto.identity.resolveHandle` XRPC method to resolve a handle to a [DID](did.md), which will use the above methods under the hood.
-
-::: code-group
-
-```ts [@atcute]
-import {
-	CompositeHandleResolver,
-	DohJsonHandleResolver,
-	WellKnownHandleResolver,
-	XrpcHandleResolver,
-} from "@atcute/identity-resolver";
-
-const did = await handleResolver.resolve("bsky.app");
-// -> "did:plc:z72i7hdynmk6r22z27h6tvur"
+```json
+"alsoKnownAs": [
+	"at://example.com"
+]
 ```
 
-:::
+Generally, applications will only use the first `at://` handle in the `alsoKnownAs` array as the primary handle for the DID.
 
-## DNS TXT Records
+## Where handles are used
 
-A DNS lookup is performed under the `_atproto` subdomain of the handle"s domain.
+Applications generally use handles as a more user friendly way to refer to DIDs. For example, instead of showing a user"s DID, an application may show the user's handle.
 
-The TXT record should have the contents `did=<DID>` where `<DID>` is the DID that the handle resolves to.
+BlueSky also uses handles while mentioning another user in a post. The mention data will still contain the DID of the mentioned user, however, the post's text content will contain the handle of the mentioned user.
 
-For example, to resolve the handle `deniz.blue` to a [DID](did.md), a DNS TXT lookup is performed for the record `_atproto.deniz.blue`. If the record contains `did=did:example:123`, then the handle `deniz.blue` resolves to the DID `did:example:123`.
+## Handles to DIDs
 
-## HTTPS .well-known Endpoint
-
-An HTTP GET request is made to the `/.well-known/atproto-did` endpoint of the handle"s domain.
-
-`Content-Type` of the response must be `text/plain` and the body of the response should be the DID that the handle resolves to.
-
-For example, to resolve the handle `deniz.blue` to a [DID](did.md), an HTTP GET request is made to `https://deniz.blue/.well-known/atproto-did`. If the response body contains `did:example:123`, then the handle `deniz.blue` resolves to the DID `did:example:123`.
+See [Resolving Handles to DIDs](resolving-handles.md) for more information on how just the handles themselves are resolved to DIDs.
