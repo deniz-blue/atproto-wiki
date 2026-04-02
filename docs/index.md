@@ -16,4 +16,4 @@ This allows for a more open and interoperable ecosystem, where users can easily 
 - The PDS contains the user's [Repository](repo/index.md), which contains their [records](repo/record.md) grouped by [collections](repo/collection.md).
 - Records can be validated per-collection using [Lexicons](lexicon/index.md).
 - Applications can use [OAuth](oauth/index.md) to request access to write to a user's Repository.
-- [Relays](relay/index.md) listen to many PDS'es and aggregates/broadcasts changes, allowing applications to work in real-time.
+- [Relays](sync/index.md) listen to many PDS'es and aggregates/broadcasts changes, allowing applications to work in real-time.

@@ -5,7 +5,7 @@
 	"sideEffects": false,
 	"scripts": {
 		"dev": "vitepress dev docs",
-		"build": "vitepress build docs && mv docs/.vitepress/dist .",
+		"build": "vitepress build docs && cp -rf docs/.vitepress/dist .",
 		"preview": "vitepress preview docs"
 	},
 	"devDependencies": {
