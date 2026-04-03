@@ -32,6 +32,7 @@ export const sidebar = [
 	section("Lexicons", [
 		item("Lexicon", "/lexicon"),
 		item("Resolving Lexicons", "/lexicon/resolving"),
+		item("Writing Lexicons", "/lexicon/writing"),
 	]),
 	section("Sync & Relays", [
 		item("Sync", "/sync"),
