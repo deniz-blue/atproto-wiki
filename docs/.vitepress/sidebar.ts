@@ -2,7 +2,7 @@ const item = (text: string, link?: string) => ({ text, link });
 const section = (text: string, items: any[]) => ({ text, items });
 
 export const sidebar = [
-	item("AT Protocol", "/"),
+	item("Overview", "/"),
 	item("AT Protocol For Users", "/for-users"),
 	item("Tools & Libraries", "/tools-and-libraries"),
 	section("Identity", [
@@ -30,7 +30,8 @@ export const sidebar = [
 		item("Working with Records", "/application/records"),
 	]),
 	section("Lexicons", [
-		item("Lexicon", "/lexicon"),
+		item("Lexicons", "/lexicon"),
+		item("Exploring Lexicons", "/lexicon/exploring"),
 		item("Resolving Lexicons", "/lexicon/resolving"),
 		item("Writing Lexicons", "/lexicon/writing"),
 	]),

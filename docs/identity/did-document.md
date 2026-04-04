@@ -1,7 +1,3 @@
----
-title: DID Document
----
-
 # DID Document
 
 The [DID](did.md) Document is a JSON document (in the form of a [JSON-LD](https://json-ld.org/) document) that contains information about a [DID](did.md), such as the public keys associated with the [DID](did.md), and service endpoints.

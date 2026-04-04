@@ -1,7 +1,4 @@
----
-title: Jetstream
-description: Filtered real-time stream of events in the Atmosphere
----
+# Jetstream
 
 Jetstream is a filtered real-time stream of events in the Atmosphere.
 It allows applications to subscribe to changes in specific [collections](../repo/collection.md) and/or [DIDs](../identity/did.md),

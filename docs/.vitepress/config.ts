@@ -4,8 +4,8 @@ import { sidebar } from "./sidebar";
 import { ExtXRPC } from "./ext-xrpc";
 
 export default defineConfig({
-	title: "AT Protocol Wiki",
-	description: "AT Protocol Wiki",
+	title: "AT Protocol Community Wiki",
+	description: "A community-maintained wiki for the AT Protocol ecosystem",
 	markdown: {
 		config: (md) => {
 			ExtMermaid(md);
